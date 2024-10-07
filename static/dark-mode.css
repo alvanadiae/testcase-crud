@@ -1,0 +1,179 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+a i {
+    margin-right: 10px;
+    color: rgb(149, 89, 213);
+}
+
+a i:hover {
+    color: rgb(72, 14, 88);
+}
+
+button {
+    margin: 20px 0;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+/* Style untuk Tombol Add dan Edit */
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 15px;
+    background-color: #ad67ba; 
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #884f93;
+}
+
+/* Style untuk Form */
+form {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgb(223, 200, 200);
+}
+
+form label {
+    font-weight: bold; color: black;
+    display: block;
+    margin-bottom: 8px;
+}
+
+form input[type="text"], form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+}
+
+form input[type="submit"] {
+    background-color: #ad67ba;
+    color: rgb(0, 0, 0);
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+    background-color: #ad67ba;
+}
+
+/* Style untuk pesan error atau sukses */
+.message {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.success {
+    background-color: #dff0d8;
+    color: #ad67ba;
+}
+
+.error {
+    background-color: #f2dede;
+    color: #a94442;
+}
+
+/* Style untuk Tombol Back to Index */
+.btn-back {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #ad67ba; /* Warna biru */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px; /* Membuat sudut tombol melengkung */
+    font-weight: bold;
+    font-size: 14px;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Efek transisi untuk hover */
+}
+
+.btn-back:hover {
+    background-color: #975ba1; /* Warna biru lebih gelap saat di-hover */
+    transform: scale(1.05); /* Efek membesar sedikit saat di-hover */
+}
+
+/* Tambahan: Bisa juga tambahkan shadow untuk tombol */
+.btn-back {
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Memberikan bayangan halus pada tombol */
+}
+
+.btn-back:hover {
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.15); /* Membuat bayangan lebih jelas saat di-hover */
+}
+
+/* Style untuk tombol Switch to Dark Mode */
+.btn-dark-mode {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #a89faa;
+    color: rgb(66, 59, 59);
+    padding: 10px;
+    border: none;
+    border-radius: 2%; /* Membuat tombol bulat */
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Gaya tambahan saat mode gelap aktif */
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+body.dark-mode a {
+    color: #ffffff;
+}
+
+/* Style untuk Footer */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #333; /* Warna latar belakang gelap */
+    color: white;
+    position: fixed; /* Tetap di bagian bawah halaman */
+    bottom: 0;
+    width: 100%;
+    font-size: 14px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}

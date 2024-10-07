@@ -1,0 +1,23 @@
+{% extends 'layout.html' %}
+{% block content %}
+ <!-- Tombol untuk kembali ke halaman Index -->
+ <a href="{{ url_for('index') }}" class="btn-back">Back to Home </a>
+    <center><h2>Add New Item</h2></center>
+    <form method="POST">
+        <label for="name">Title Test Case</label>
+        <input type="text" id="name" name="name" placeholder="Enter item name" required>
+
+        <label for="description">Test Steps</label>
+        <textarea id="description" name="description" placeholder="Enter item description" required></textarea>
+
+        <input type="submit" value="Add Item">
+    </form>
+
+    
+{% endblock %}
+
+{% if message %}
+    <div class="message {% if success %}success{% else %}error{% endif %}">
+        {{ message }}
+    </div>
+{% endif %}

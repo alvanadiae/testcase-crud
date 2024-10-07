@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Cases App</title>
+    <!-- Link ke Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Link default ke style.css -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" id="theme-link">
+</head>
+<body>
+    <div class="container">
+        <h1>Test Cases Application</h1>
+        <!-- Tombol untuk mengaktifkan dark mode -->
+        
+        <button id="dark-mode-toggle" class="btn-dark-mode">
+        </button>
+        {% block content %}{% endblock %}
+
+    </div>
+
+    <script>
+        const toggleButton = document.getElementById('dark-mode-toggle');
+        const themeLink = document.getElementById('theme-link');
+
+        // Cek apakah dark mode sudah disimpan di localStorage
+        const currentTheme = localStorage.getItem('theme');
+        if (currentTheme === 'dark') {
+            themeLink.href = "{{ url_for('static', filename='dark-mode.css') }}";
+            toggleButton.textContent = "Switch to Light Mode";
+        }
+
+        // Fungsi untuk toggle dark mode
+        toggleButton.addEventListener('click', function() {
+            if (themeLink.getAttribute('href') === "{{ url_for('static', filename='style.css') }}") {
+                themeLink.href = "{{ url_for('static', filename='dark-mode.css') }}";
+                toggleButton.textContent = 'Light Mode';
+                localStorage.setItem('theme', 'dark');
+            } else {
+                themeLink.href = "{{ url_for('static', filename='style.css') }}";
+                toggleButton.textContent = 'Dark Mode';
+                localStorage.setItem('theme', 'light');
+            }
+
+
+        });
+
+        
+    </script>
+    <footer>
+        <p>&copy; 2024 TCA (Test Case Application) by QAKU.id. All rights reserved.</p>
+    </footer>
+</body>
+</html>
